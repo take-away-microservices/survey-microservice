@@ -1,0 +1,17 @@
+version: "3"
+services:
+  service_db:
+    image: mongo
+    volumes:
+      - /data/db
+  service:
+    build: .
+    command: yarn run dev
+    environment:
+      - INTERNAL_PORT=4000
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "4000:4000"
+    depends_on:
+      - service_db

@@ -1,0 +1,49 @@
+{
+  "name": "survey-microservice",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/take-away-microservices/survey-microservice",
+  "author": "Felipe Morales <felipe.morales93@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon -L -w src --exec \"babel-node src\"",
+    "test": "NODE_ENV=test jest --forceExit"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "modulePathIgnorePatterns": [
+      "dist/"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.2.4",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-import-resolver-babel-module": "^5.1.2",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^25.2.4",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-router": "^8.0.8",
+    "mongoose": "^5.9.6"
+  }
+}
