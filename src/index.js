@@ -18,4 +18,4 @@ app.use(bodyParser());
 // Routes
 app.use(routes);
 
-app.listen(process.env.INTERNAL_PORT || 4000);
+app.listen(4000);
